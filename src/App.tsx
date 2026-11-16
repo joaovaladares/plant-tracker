@@ -1,16 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import BottomNav from './components/BottomNav'
-import Home from './pages/Home'
-import PlantsGrid from './pages/PlantsGrid'
-import History from './pages/History'
-import PlantDetail from './pages/PlantDetail'
-import WateringSuccess from './pages/WateringSuccess'
-import AddPlant from './pages/AddPlant'
-import Settings from './pages/Settings'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BottomNav from "./components/BottomNav";
+import Home from "./pages/Home";
+import PlantsGrid from "./pages/PlantsGrid";
+import History from "./pages/History";
+import PlantDetail from "./pages/PlantDetail";
+import WateringSuccess from "./pages/WateringSuccess";
+import AddPlant from "./pages/AddPlant";
+import Settings from "./pages/Settings";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/plant-tracker">
       <div className="app-shell">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,5 +24,5 @@ export default function App() {
         <BottomNav />
       </div>
     </BrowserRouter>
-  )
+  );
 }
